@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Blog Dashboard</title>
+    <link rel="stylesheet" href="blog.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#post-form">Create Post</a></li>
+                    <li><a href="#update-form">Update Post</a></li>
+                    <li><a href="#posts">Posts</a></li>
+                    <li><a href="#user-details">User Details</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <h1>Simple Blog Dashboard</h1>
+
+        <section id="posts">
+            <h2>Blog Posts</h2>
+            <div id="post-list" class="grid"></div>
+        </section>
+
+        <section id="post-form">
+            <h2>Create New Post</h2>
+            <form id="create-post">
+                <input type="text" id="title" placeholder="Title" required>
+                <textarea id="body" placeholder="Body" required></textarea>
+                <input type="number" id="userId" placeholder="User ID" required>
+                <button type="submit">Add Post</button>
+            </form>
+        </section>
+
+        <section id="update-form">
+            <h2>Update Post</h2>
+            <form id="update-post">
+                <input type="number" id="update-id" placeholder="Post ID" required readonly>
+                <input type="text" id="update-title" placeholder="Title" required>
+                <textarea id="update-body" placeholder="Body" required></textarea>
+                <input type="number" id="update-userId" placeholder="User ID" required>
+                <button type="submit">Update Post</button>
+            </form>
+        </section>
+
+        <section id="user-details">
+            <h2>User Details</h2>
+            <div id="user-info"></div>
+        </section>
+
+    </div>
+
+    <script src="blog.js"></script>
+</body>
+
+</html>
